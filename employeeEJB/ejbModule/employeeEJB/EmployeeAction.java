@@ -48,7 +48,7 @@ public class EmployeeAction {
 	    	
 	    	Employee ob = em.merge(new Employee(uid, name, phn_no, gender, address, email, pancardno, adhaarcardno, experience,
 	    			doj, dob));
-	    	return  ob;
+	    	return  ob; 
 	    }
 	
 	

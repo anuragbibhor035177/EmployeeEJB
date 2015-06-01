@@ -2,9 +2,11 @@ package com.bean;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.HashSet;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Employee implements Serializable{
@@ -13,6 +15,11 @@ public class Employee implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
+	@OneToMany(mappedBy="emp")
+	private HashSet<City> cities; 
+	
+	
 	@Id
 	private String uid;
 	private String name;
