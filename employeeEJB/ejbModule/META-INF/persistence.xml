@@ -3,11 +3,11 @@
 	<persistence-unit name="employeeEJB">
 	<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<jta-data-source>java:/ojdbc/OracleDSAnu</jta-data-source>
-		<class>com.niit.Student</class>
+		<class>com.bean.Employee</class>
 		
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
-			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
 			<property name="hibernate.connection.driver_class" value="oracle.jdbc.OracleDriver" />
 		</properties>
 	</persistence-unit>
